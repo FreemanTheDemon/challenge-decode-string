@@ -13,7 +13,7 @@ const decoder = (str) => {
     // turn the shift number into a string so we can get the length
     // define the starting point of i this way
     let shiftString = shift + '';
-    // loop over the input string, starting one after the start of the string
+    // loop over the input string, starting one after the number
     for (let i = shiftString.length; i < str.length; i++) {
         // define a helper variable
         let currentChar = str[i];
