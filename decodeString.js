@@ -26,3 +26,4 @@ const decoder = (str) => {
 console.log(decoder('1a'));
 console.log(decoder('3ce'));
 console.log(decoder('2fcjjm'));
+console.log(decoder('3ald'));
