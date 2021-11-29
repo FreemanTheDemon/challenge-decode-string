@@ -9,9 +9,12 @@ const decoder = (str) => {
     // create a result string to return later
     let result = '';
     // get the first character and convert it into a number (in base 10)
-    let shift = parseInt(str[0], 10);
+    let shift = parseInt(str, 10);
+    // turn the shift number into a string so we can get the length
+    // define the starting point of i this way
+    let shiftString = shift + '';
     // loop over the input string, starting one after the start of the string
-    for (let i = 1; i < str.length; i++) {
+    for (let i = shiftString.length; i < str.length; i++) {
         // define a helper variable
         let currentChar = str[i];
         // define the new position by using indexOf and shifting it by the shift we defined earlier
@@ -23,7 +26,7 @@ const decoder = (str) => {
     return result;
 }
 
-console.log(decoder('1a'));
-console.log(decoder('3ce'));
-console.log(decoder('2fcjjm'));
-console.log(decoder('3ald'));
+console.log(decoder('1a')); // b
+console.log(decoder('3ce')); // fh
+console.log(decoder('-2fcjjm')); // dahhk
+console.log(decoder('11ald')); // lwo
